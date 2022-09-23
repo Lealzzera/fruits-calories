@@ -1,12 +1,13 @@
 import React from 'react'
+import './Button.css'
 
 type Props = {
   text: string,
-  handleClick: any,
+  handleClick?: any,
 }
 const Button = ({ text, handleClick }: Props) => {
   return (
-    <button onClick={handleClick}>{text}</button>
+    <button className='button' onClick={handleClick}>{text}</button>
   )
 }
 
