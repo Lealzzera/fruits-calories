@@ -1,5 +1,5 @@
 .fruits-card {
-  border: 0.5px solid #2E7D32;
+  border: 1.5px solid #F9A825;
   border-radius: 10px;
   height: 170px;
   display: flex;
@@ -39,8 +39,6 @@
   margin-left: 10px;
   font-size: 20px;
 }
-
-@media (min-width: 768px) {}
 
 @media (min-width: 1024px) {
   .fruits-card {

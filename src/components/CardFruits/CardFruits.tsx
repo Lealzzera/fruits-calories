@@ -22,7 +22,7 @@ const CardFruits = ({ openCard, image, name, calories, protein, carbo, fiber, fa
         <div className='description'>
           <div className='content-description'>
             <p>Calorias: {calories}</p>
-            <p>Proteína: {protein}</p>
+            <p>Proteínas: {protein}</p>
             <p>Carboidratos: {carbo}</p>
           </div>
           <div className='content-description'>
