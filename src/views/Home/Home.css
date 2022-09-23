@@ -1,0 +1,9 @@
+.home {
+  background-color: #4CAF50;
+}
+
+.content-home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
