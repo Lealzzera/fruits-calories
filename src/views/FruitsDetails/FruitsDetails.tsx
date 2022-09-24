@@ -1,6 +1,7 @@
 import React from 'react';
 import './FruitsDetails.css';
-import Button from '../../components/Button/Button'
+import Button from '../../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
   image?: string,
@@ -14,6 +15,8 @@ type Props = {
 }
 
 const FruitsDetails = ({ image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
+  const navigate = useNavigate();
+
   return (
     <div className='content-details'>
       <h1 className='details-title'>Banana</h1>
@@ -30,7 +33,7 @@ const FruitsDetails = ({ image, name, calories, protein, carbo, fiber, fat, port
           <p>Porção:{portion} </p>
         </div>
       </div>
-      <Button text='Voltar' />
+      <Button handleClick={() => navigate('/')} text='Voltar' />
     </div>
   )
 }
