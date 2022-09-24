@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import './Button.css'
 
 type Props = {
   text: string,
-  handleClick?: any,
+  handleClick: MouseEventHandler<HTMLButtonElement>
 }
 const Button = ({ text, handleClick }: Props) => {
   return (

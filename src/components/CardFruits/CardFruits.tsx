@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import './CardFruits.css'
 
 type Props = {
-  openCard?: any,
   image: string,
   name: string,
   calories: string,
@@ -13,9 +12,10 @@ type Props = {
   portion: string
 }
 
-const CardFruits = ({ openCard, image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
+const CardFruits = ({ image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
+
   return (
-    <div onClick={openCard} className='fruits-card'>
+    <div className='fruits-card'>
       <img className='img-fruit' src={image} alt="" />
       <div>
         <h2 className='title'>{name}</h2>
