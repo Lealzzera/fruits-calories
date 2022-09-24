@@ -1,0 +1,60 @@
+.content-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 20px 0px 20px;
+}
+
+.details-title {
+  color: #1B5E20;
+  font-size: 35px;
+}
+
+.details-image {
+  width: 150px;
+  display: flex;
+}
+
+.content-details-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  font-size: 12px;
+  color: #424242;
+}
+
+.divs-description {
+  flex-direction: column;
+  padding: 0px 50px 0px;
+}
+
+@media (min-width: 1024px) {
+
+  .details-title {
+    font-size: 35px;
+  }
+
+  .details-image {
+    width: 180px;
+  }
+
+  .content-details-description {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .details-title {
+    font-size: 45px;
+  }
+
+  .details-image {
+    width: 250px;
+  }
+
+  .content-details-description {
+    font-size: 30px;
+  }
+}

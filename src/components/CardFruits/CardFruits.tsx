@@ -1,8 +1,9 @@
-import React from 'react'
-import './CardFruits.css'
+import React from 'react';
+import './CardFruits.css';
+import { useDispatch } from 'react-redux';
+import { setName, setCalories, setCarbo, setFat, setFiber, setImage, setProtein, setPortion } from '../../redux/reducers/fruitsReducer'
 
 type Props = {
-  openCard?: any,
   image: string,
   name: string,
   calories: string,
@@ -13,16 +14,30 @@ type Props = {
   portion: string
 }
 
-const CardFruits = ({ openCard, image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
+const CardFruits = ({ image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
+
+  const dispatch = useDispatch()
+
+  const saveInfosInStore = () => {
+    dispatch(setName(name));
+    dispatch(setImage(image));
+    dispatch(setCalories(calories));
+    dispatch(setProtein(protein));
+    dispatch(setCarbo(carbo));
+    dispatch(setFiber(fiber));
+    dispatch(setFat(fat));
+    dispatch(setPortion(portion));
+  }
+
   return (
-    <div onClick={openCard} className='fruits-card'>
+    <div onClick={saveInfosInStore} className='fruits-card'>
       <img className='img-fruit' src={image} alt="" />
       <div>
         <h2 className='title'>{name}</h2>
         <div className='description'>
           <div className='content-description'>
             <p>Calorias: {calories}</p>
-            <p>Proteína: {protein}</p>
+            <p>Proteínas: {protein}</p>
             <p>Carboidratos: {carbo}</p>
           </div>
           <div className='content-description'>
