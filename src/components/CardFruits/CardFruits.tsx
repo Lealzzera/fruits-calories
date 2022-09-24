@@ -1,5 +1,7 @@
-import React, { MouseEventHandler } from 'react'
-import './CardFruits.css'
+import React from 'react';
+import './CardFruits.css';
+import { useDispatch } from 'react-redux';
+import { setName, setCalories, setCarbo, setFat, setFiber, setImage, setProtein, setPortion } from '../../redux/reducers/fruitsReducer'
 
 type Props = {
   image: string,
@@ -14,8 +16,21 @@ type Props = {
 
 const CardFruits = ({ image, name, calories, protein, carbo, fiber, fat, portion }: Props) => {
 
+  const dispatch = useDispatch()
+
+  const saveInfosInStore = () => {
+    dispatch(setName(name));
+    dispatch(setImage(image));
+    dispatch(setCalories(calories));
+    dispatch(setProtein(protein));
+    dispatch(setCarbo(carbo));
+    dispatch(setFiber(fiber));
+    dispatch(setFat(fat));
+    dispatch(setPortion(portion));
+  }
+
   return (
-    <div className='fruits-card'>
+    <div onClick={saveInfosInStore} className='fruits-card'>
       <img className='img-fruit' src={image} alt="" />
       <div>
         <h2 className='title'>{name}</h2>
