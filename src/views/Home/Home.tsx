@@ -1,22 +1,34 @@
 import React from 'react';
 import CardFruits from '../../components/CardFruits/CardFruits';
 import './Home.css';
-import { Api } from '../../api/api';
+import { api } from '../../api/api';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
 
   const [fruitsData, setFruitsData] = React.useState<any>([]);
+  const [loading, setLoading] = React.useState<any>(null);
 
   React.useEffect(() => {
-    fetchFruits()
+    (async () => {
+      await fetchFruits();
+    })();
   }, []);
 
   const fetchFruits = async () => {
-    let response = await Api.getFruits();
-    response.sort((fruitA: any, fruitB: any) => (fruitA.name > fruitB.name) ? 1 : -1);
-    setFruitsData(response);
+    setLoading('Carregando...');
+    try {
+      let response = await api.getFruits();
+      response.sort((fruitA: any, fruitB: any) => (fruitA.name > fruitB.name) ? 1 : -1);
+      setFruitsData(response);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(null);
+    }
   }
+
+  if (loading !== null) return <div>{loading}</div>
   return (
     <div className='home'>
       <div className='content-home'>
