@@ -34,7 +34,7 @@ const Home = () => {
       <div className='content-home'>
         {fruitsData.map(({ name, calories, protein, carbohydrates, fiber, portion, photo, blubber }: any, index: any) => (
           <div key={index}>
-            <Link style={{ textDecoration: 'none' }} to="/details">
+            <Link style={{ textDecoration: 'none' }} to={`details/${name}`}>
               <CardFruits name={name} calories={calories} protein={protein} carbo={carbohydrates} fiber={fiber} fat={blubber} portion={portion} image={photo} />
             </Link>
           </div>
