@@ -11,7 +11,7 @@
   margin-bottom: 5px;
   cursor: pointer;
   background-color: #FFFF;
-  width: 350px;
+  width: 250px;
 }
 
 .fruits-card:hover {
@@ -19,7 +19,7 @@
 }
 
 .img-fruit {
-  width: 125px;
+  width: 105px;
 }
 
 .description {
@@ -31,57 +31,35 @@
 
 .content-description {
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .title {
   color: #1B5E20;
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 350px) {
   .fruits-card {
-    width: 700px;
-    height: 250px;
+    width: 340px;
   }
 
   .content-description {
-    font-size: 15px;
-    margin-left: 15px;
+    font-size: 10px;
   }
 
   .title {
-    font-size: 30px;
-    margin-left: 15px;
-  }
-
-  .img-fruit {
-    width: 180px;
+    font-size: 17px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
   .fruits-card {
-    width: 900px;
-    height: 400px;
-  }
-
-  .img-fruit {
-    width: 250px;
+    width: 360px;
   }
 
   .content-description {
-    font-size: 25px;
-    margin-left: 40px;
-  }
-
-  .title {
-    font-size: 40px;
-  }
-
-  .content-description,
-  .title {
-    margin-left: 40px;
+    font-size: 12px;
   }
 }

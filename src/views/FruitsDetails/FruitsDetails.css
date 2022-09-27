@@ -19,35 +19,20 @@
 .content-details-description {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex: 1;
   flex-direction: row-reverse;
   font-size: 12px;
   color: #424242;
 }
 
 .divs-description {
-  flex-direction: column;
   padding: 0px 50px 0px;
-}
-
-@media (min-width: 1024px) {
-
-  .details-title {
-    font-size: 35px;
-  }
-
-  .details-image {
-    width: 180px;
-  }
-
-  .content-details-description {
-    font-size: 20px;
-  }
 }
 
 @media (min-width: 1280px) {
   .details-title {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .details-image {
@@ -55,6 +40,6 @@
   }
 
   .content-details-description {
-    font-size: 30px;
+    font-size: 20px;
   }
 }

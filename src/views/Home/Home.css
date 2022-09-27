@@ -6,4 +6,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 730px) {
+  .home {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-home {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 35px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .content-home {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content-home {
+    column-gap: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .content-home {
+    column-gap: 40px;
+    grid-template-columns: auto auto auto auto;
+  }
 }
